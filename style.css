@@ -12,7 +12,7 @@
   font-family: "Merriweather", serif;
 }
 .container {
-  width: 1036px;
+  width: 1136px;
   height: 760;
   padding: 40px;
   margin: auto;
@@ -51,7 +51,8 @@
 }
 .container h2 {
   color: var(--dark-blue);
-  font-size: 23px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 .container h3 {
   color: var(--white);
@@ -64,6 +65,11 @@
   padding: 0 60px 30px 50px;
 }
 
+.container p {
+  color: var(--light-blue);
+  font-size: 16px;
+}
+
 img {
   width: 100%;
 }
@@ -74,4 +80,16 @@ img {
   width: 302px;
   height: 443px;
   border-radius: 3px;
+  box-shadow: 0px 24px 15px -20px rgba(9, 22, 89, 0.503865);
+}
+
+button {
+  width: 145px;
+  height: 46px;
+  margin-left: 50px;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
 }
