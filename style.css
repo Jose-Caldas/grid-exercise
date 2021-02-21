@@ -1,9 +1,14 @@
+/* ================================== Colors =============================== */
+
 :root {
+  --gray: #f2f2f2;
   --white: #ffffff;
-  --dark-blue: #151e4b;
-  --blue: #232846;
+  --blue: #151e4b;
+  --dark-blue: #232846;
   --light-blue: #5f658b;
 }
+
+/* ================================== Global Configurations =================*/
 
 * {
   margin: 0;
@@ -11,99 +16,134 @@
   box-sizing: border-box;
   font-family: "Merriweather", serif;
 }
+
+/* ================================== Body =================*/
+
 body {
-  background: #eee;
+  background: var(--gray);
 }
+
+/* ================================== Container =================*/
 .container {
+  max-width: 1136px;
+  width: 100%;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
-  max-width: 1136px;
-  min-height: 875px;
-  padding: 70px 60px;
-  margin: 60px auto;
-  background: var(--white);
   border-radius: 3px;
+  margin: 30px auto;
+  padding: 50px 60px;
 }
-span {
+
+.container h1 {
+  font-size: 32px;
   color: var(--dark-blue);
+  font-weight: bold;
 }
+
 .content {
   display: flex;
-  padding: 10px;
+  padding: 20px;
 }
-
-.main {
+header {
+  padding: 0 0 20px 20px;
+}
+header span {
+  font-size: 18px;
+  color: var(--dark-blue);
+}
+header h1 {
+  margin-top: 20px;
+}
+.cards {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
-.container h1 {
-  color: var(--dark-blue);
-  font-size: 32px;
-  margin: 20px 0 30px 0;
-}
-.container h2 {
+
+.card-content h2 {
   color: var(--dark-blue);
   font-size: 16px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
-.container h3 {
+
+.card-content p {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--light-blue);
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 443px;
+  background: var(--blue);
+  margin-left: 20px;
+  box-shadow: 0px 24px 15px -20px rgba(9, 22, 89, 0.503865);
+  border-radius: 3px;
+}
+.banner h2 {
   color: var(--white);
   font-size: 16px;
+  font-weight: bold;
   padding: 50px 60px 15px 50px;
 }
-.container h4 {
-  color: var(--white);
+.banner p {
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
-  padding: 0 60px 30px 50px;
-}
-
-.container p {
-  color: var(--light-blue);
-  font-size: 16px;
-}
-
-img {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.card-right {
-  background-color: var(--dark-blue);
   color: var(--white);
-  max-width: 302px;
-  height: 443px;
-  border-radius: 3px;
-  box-shadow: 0px 24px 15px -20px rgba(9, 22, 89, 0.503865);
-  margin-left: 30px;
+  padding: 50px 60px 30px 50px;
 }
 
 button {
   width: 145px;
   height: 46px;
-  margin-left: 50px;
-  align-items: center;
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
+  background-color: var(--white);
+  margin-left: 50px;
+}
+
+.image img {
+  width: 100%;
 }
 
 @media (max-width: 700px) {
   .content {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: none;
   }
-  .main {
-    grid-template-columns: 1fr;
+  .container {
+    height: 1293px;
+    padding: 10px;
   }
-  .card-right {
+  .banner {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 60px;
     width: 265px;
     height: 322px;
-    margin: none;
+  }
+  .banner h2 {
+    padding: 28px 25px 15px 22px;
+  }
+  .banner p {
+    padding: 0 25px 82px 22px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
   }
   button {
-    margin-bottom: 20px;
+    width: 218px;
+    height: 46px;
+    margin-left: 22px;
+  }
+  header span {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
   }
 }
