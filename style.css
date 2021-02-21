@@ -21,6 +21,7 @@
 
 body {
   background: var(--gray);
+  padding: 10px;
 }
 
 /* ================================== Container =================*/
@@ -32,7 +33,7 @@ body {
   flex-direction: column;
   border-radius: 3px;
   margin: 30px auto;
-  padding: 50px 60px;
+  padding: 106px 87px;
 }
 
 .container h1 {
@@ -43,20 +44,19 @@ body {
 
 .content {
   display: flex;
-  padding: 20px;
 }
 header {
-  padding: 0 0 20px 20px;
 }
 header span {
   font-size: 18px;
   color: var(--dark-blue);
 }
 header h1 {
-  margin-top: 20px;
+  margin-top: 19px;
+  margin-bottom: 30px;
 }
 .cards {
-  margin-top: 30px;
+  margin-top: 46px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -66,7 +66,7 @@ header h1 {
   color: var(--dark-blue);
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15.5px;
 }
 
 .card-content p {
@@ -77,24 +77,26 @@ header h1 {
 .banner {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   width: 100%;
+  max-width: 302px;
   height: 443px;
   background: var(--blue);
-  margin-left: 20px;
+  margin-left: 25px;
   box-shadow: 0px 24px 15px -20px rgba(9, 22, 89, 0.503865);
   border-radius: 3px;
+  padding: 50px 60px 0 50px;
 }
 .banner h2 {
   color: var(--white);
   font-size: 16px;
   font-weight: bold;
-  padding: 50px 60px 15px 50px;
 }
 .banner p {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 16px;
   color: var(--white);
-  padding: 50px 60px 30px 50px;
+  margin: 15px 0 40px;
 }
 
 button {
@@ -103,43 +105,39 @@ button {
   border: none;
   border-radius: 5px;
   background-color: var(--white);
-  margin-left: 50px;
 }
 
 .image img {
   width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1056px) {
   .content {
     flex-direction: column;
     padding: none;
   }
   .container {
-    height: 1293px;
-    padding: 10px;
+    padding: 60px 40px;
   }
   .banner {
     display: flex;
     flex-direction: column;
-
+    max-width: unset;
     margin-top: 60px;
-    width: 265px;
-    height: 322px;
+    margin-left: unset;
   }
   .banner h2 {
-    padding: 28px 25px 15px 22px;
   }
   .banner p {
-    padding: 0 25px 82px 22px;
   }
   .cards {
     grid-template-columns: 1fr;
   }
   button {
-    width: 218px;
-    height: 46px;
-    margin-left: 22px;
+  }
+  header h1 {
+    margin-bottom: 51px;
+    margin-top: 31px;
   }
   header span {
     display: flex;
