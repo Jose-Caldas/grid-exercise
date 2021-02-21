@@ -3,10 +3,9 @@
 </h1>
 
 <h4 align="center">
-  A App to practice CSS and HTML
+  An App to practice CSS and HTML
 </h4>
 <p align="center">
-
 
 ## :art: Design
 
